@@ -1,0 +1,62 @@
+<hibernate-configuration>
+	<session-factory>
+		<!-- JDBC Database connection settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		
+		<!-- below previous settings will be obtained through the dbConfig.properties -->
+		
+		<!--  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ubhardware?createDatabaseIfNotExist=true </property> -->
+		<!-- <property name="hibernate.connection.username">root</property> -->
+		<!-- The database password -->
+		<!-- <property name="hibernate.connection.password"></property> -->
+			
+		
+		<!-- JDBC connection pool settings ... using built-in test pool -->
+		<property name="hibernate.connection.pool_size">1</property>
+		<!-- Select our SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<!-- Echo the SQL to stdout -->
+		<property name="show_sql">true</property>
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- dbcp connection pool configuration -->
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.idle_test_period">30</property>
+		<mapping class="bookShop.entities.Products" />
+		<mapping class="bookShop.entities.Category" />
+		<mapping class="bookShop.entities.Supplier" />
+		<mapping class="bookShop.entities.Users" />
+		<mapping class="bookShop.entities.Role" />
+		<mapping class="bookShop.entities.Sales" />
+		<mapping class="bookShop.entities.PayModes" />
+		<mapping class="bookShop.entities.PurchaseOrder" />
+		<mapping class="bookShop.entities.OrderItems" />
+		<mapping class="bookShop.entities.RoleFunctions"/>
+		<mapping class="bookShop.entities.SalesDetails"/>
+		<mapping class="bookShop.entities.Company"/>
+		<mapping class="bookShop.entities.SupplierBrImages"/>
+		<mapping class="bookShop.entities.GoodReceived"/>
+		<mapping class="bookShop.entities.GoodReceivedDetails"/>
+		<mapping class="bookShop.entities.CashRegister"/>	
+		<mapping class="bookShop.entities.SupplierPayments"/>
+		<mapping class="bookShop.entities.SupplierPaymentDetail"/>	
+		<mapping class="bookShop.entities.SupplierReturn"/>	
+		<mapping class="bookShop.entities.SupplierReturnDetail"/>	
+		<mapping class="bookShop.entities.POSPayDetails"/>	
+		<mapping class="bookShop.entities.Customer"/>	
+		<mapping class="bookShop.entities.CreditInvoice"/>
+		<mapping class="bookShop.entities.CreditInvoiceDetail"/>
+		<mapping class="bookShop.entities.PriceUpdate"/>
+		<mapping class="bookShop.entities.OverheadCategory"/>
+		<mapping class="bookShop.entities.MonthlyOverheads"/>
+		<mapping class="bookShop.entities.CustomerRefunds"/>
+		<mapping class="bookShop.entities.CustomerRefundDetail"/>
+		<mapping class="bookShop.entities.CreditInvoiceVoid"/>
+		<mapping class="bookShop.entities.CreditInvoiceVoidDetail"/>
+	</session-factory>
+</hibernate-configuration>
