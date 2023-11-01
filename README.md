@@ -1,3 +1,2 @@
-# Inv-system-openjfx-prev
-Previous Working version deployed to Mr Aslam' Store before Double Seven Car Audio Version
+# Inv-system-openjfx-prev Working version deployed to Grocety Stores before Double Seven Car Audio Version
 
